@@ -57,15 +57,30 @@ button {
 .display1{
     display:flex;
     justify-content: space-between;}
-#pick{
-    background-color: white;
+button{
         border-radius: 15%;
-                color: black;
         height: 50px;
             width: 150px;
 }    
-#pick:hover{
+#pick:not([disabled]):hover{
     background-color: black;
             color: goldenrod;
 }
- 
+ #pick {
+     background-color: white;
+     color: black;
+
+ }
+
+ #pick:not([disabled]):hover {
+     background-color: black;
+     color: goldenrod;
+ }
+ #startGame{
+    background-color: black;
+        color: white;
+ }
+ #startGame:not([disabled]):hover {
+     background-color: goldenrod;
+     color: black;
+ }
