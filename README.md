@@ -1,26 +1,31 @@
 # Black Jack
 
-Welcome to Black Jack, a simple game of chance. Test your luck and see if you can get the perfect hand!
+Welcome to Black Jack, a simple game of chance where you aim to get a sum of cards as close to 21 as possible without going over.
 
-## Gameplay
-
-1. **Pick Cards:** Click the "Pick Cards" button to draw two random cards.
-2. **Sum:** The sum of the drawn cards is displayed.
-3. **Winning:** If the sum is exactly 21, you win! 🥳 You can pick another set of cards.
-4. **Losing:** If the sum exceeds 21, you lose. 😭 You can't pick cards anymore.
-5. **Draw Another Card:** If the sum is less than 21, you have the option to draw another card.
+## Status
+- The game status is displayed in the "Status" section.
+- The current sum of cards is displayed in the "Sum" section.
+- You can view the drawn cards in the "Cards" section.
 
 ## How to Play
+1. Click the "Start Game" button to initiate a new game.
+2. Two initial cards will be drawn, and their sum will be displayed.
+3. You can draw additional cards by clicking the "Pick Card" button.
+4. The goal is to reach a sum as close to 21 as possible without exceeding it.
+5. If you reach a sum of exactly 21, you win! 🥳
+6. If you exceed 21, you lose and can't pick more cards. 😭
 
+## Game Flow
+- The game dynamically updates the display based on the drawn cards and the current sum.
+- The "Status" section provides feedback on the game state.
+- Buttons are enabled or disabled based on the game state to ensure a smooth gaming experience.
+
+## How to Run
 1. Open the `index.html` file in your web browser.
-2. Click the "Pick Cards" button to draw two random cards.
-3. Follow the status messages to know whether to draw another card, celebrate your win, or acknowledge defeat.
 
+## Technologies Used
+- HTML
+- CSS
+- JavaScript
 
-## Contributing
-
-Contributions are welcome! If you have ideas for improvements or new features, feel free to fork the repository, make changes, and submit a pull request.
-
-
-
-Enjoy the game of Black Jack! Test your luck and aim for that perfect 21.
+Feel free to enjoy the game, and good luck with your Black Jack experience!
