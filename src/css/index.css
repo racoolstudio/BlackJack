@@ -19,13 +19,8 @@ h2 {
     margin-top: 0;
     margin-bottom: 20px;
 }
-#num1, #num2, #sumNum{
-    border-bottom: 2px solid black;
-    margin-left: 10px;
-    padding: 4px;
-    margin-bottom: 10px;
-    border-radius: 30%;
-}
+
+   
 #sumNum{
     margin-left: auto;
     margin-right:auto;
@@ -53,8 +48,13 @@ button {
     justify-content: center;
     display: flex;
     padding-right: 100px;
+    border-bottom: 2px solid black;
+        margin-left: 10px;
+        padding: 4px;
+        margin-bottom: 10px;
+        border-radius: 30%;
 }
-.display1{
+#display1{
     display:flex;
     justify-content: space-between;}
 button{

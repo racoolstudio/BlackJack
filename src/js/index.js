@@ -2,12 +2,16 @@
 let stat = document.getElementById("status");
 let newCardButton = document.getElementById("pick")
 let startButton = document.getElementById("startGame")
-
-let num1 = document.getElementById("num1");
-let num2 = document.getElementById("num2");
 let sum = document.getElementById("sumNum");
 let isOn = true;
+let cardDiv = document.getElementById("display1");
+let cards = []
 function checkCondition() {
+    cardDiv.innerHTML = "";
+
+    for (let card of cards) {
+        cardDiv.innerHTML += `<div class="card">${card}</div>`;
+    }
     if (Number(sum.innerText) < 21) {
         stat.innerText = "Draw Another Card";
         stat.style.color = "white";
@@ -18,11 +22,13 @@ function checkCondition() {
         stat.textContent = "Whoo, You won !!! 🥳";
         stat.style.color = "green";
         isOn =false;
+        cards=[];
     }
     else {
         stat.textContent= "You are Out !!! 😭\nYou Can't Pick Cards AnyMore";
         stat.style.color = "red";
         isOn = false;
+        cards =[];
     }
 
     if (isOn){
@@ -39,17 +45,16 @@ function startGame(){
     num1R = Math.floor((Math.random() * 12) + 2);
     num2R = Math.floor((Math.random() * 12) + 2);
     sumR = num1R + num2R;
-    num1.innerText = num1R;
-    num2.innerText =num2R;
     sum.innerText = sumR; 
+    cards.push(num1R);
+    cards.push(num2R);
     checkCondition();
 }
 
 function newCard(){
     let newCard = Math.floor((Math.random() * 12) + 2);
-    num1.innerText = sum.innerText;
-    num2.innerText = newCard;
-    sum.innerText = Number(num1.innerText) + Number(num2.innerText);
+    cards.push(newCard);
+    sum.innerText = Number(sum.innerText) + newCard;
     checkCondition();
 }
 
